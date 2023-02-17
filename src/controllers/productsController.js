@@ -49,7 +49,7 @@ const controller = {
 			discount: req.body.discount,
 			category: req.body.category,
 			description: req.body.description,
-			image: req.file.filename
+			image: req.file ? req.file.name : 'default-image.png'
 		}
 		products.push(newProduct);
 
