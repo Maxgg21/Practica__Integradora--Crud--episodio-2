@@ -27,7 +27,6 @@ const controller = {
             producto : autosSearch,
             name,
 			toThousand,
-           
         })
 
 		console.log(productMachado);
