@@ -18,9 +18,27 @@ const controller = {
 			toThousand
 		})
 	},
-	// search: (req, res) => {
-	// 	res.render('results')
-	// },
+	search: (req, res) => {
+
+		const  name  = req.query.keywords
+		console.log(name);
+        const autosSearch = products.find( product => product.name.toLowerCase().includes(name))
+        res.render('results',{
+            producto : autosSearch,
+            name,
+			toThousand,
+           
+        })
+
+		console.log(productMachado);
+
+		res.render('results', {
+			producto : productMachado
+		});
+
+	},
 };
 
 module.exports = controller;
+
+	

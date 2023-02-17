@@ -22,6 +22,8 @@ const uploadFile = multer({storage});
 /*** GET ALL PRODUCTS ***/ 
 router.get('/', productsController.index); 
 
+ 
+
 /*** CREATE ONE PRODUCT ***/ 
 router.get('/create/', productsController.create); 
 router.post('/', uploadFile.single('image') , productsController.store);
